@@ -97,7 +97,7 @@ summary {
 }
 
 summary:hover {
-    background-color: #032b4a;
+    background-color: #4d708a;
 }
 
 div {
@@ -139,4 +139,14 @@ aside {
 
 aside>p {
     margin: 0.5rem;
+}
+
+a {
+    padding: 10px;
+    color: black;
+}
+
+.active,
+a:hover {
+    background-color: #024a82;
 }
