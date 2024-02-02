@@ -3,6 +3,29 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+aside>p {
+    margin: 0.5rem;
+}
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 h1 {
@@ -69,7 +92,7 @@ th {
     border: 1px solid #ddd;
     padding: 25px;
     font-weight: bold;
-    background-color: #f2f2f2;
+    background-color: #000000;
     text-align: center;
 }
 
@@ -110,8 +133,7 @@ div::first-letter {
 }
 
 footer {
-    background-color: #d8d8d8;
-    color: #000000;
+    background-color: rgba(117, 117, 117, 0.8);
     padding: 10px;
     text-align: center;
 }
@@ -137,16 +159,77 @@ aside {
     color: #024a82;
 }
 
-aside>p {
-    margin: 0.5rem;
-}
-
 a {
     padding: 10px;
     color: black;
 }
 
-.active,
-a:hover {
-    background-color: #024a82;
+.active a,
+nav a.active {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.active a:hover,
+nav a.active:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.sommaire a {
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    padding: 0px 0px;
+    transition: 1s;
+}
+
+nav a {
+    position: relative;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 6px 20px;
+    transition: 1s;
+    background-color: rgba(117, 117, 117, 0.8);
+}
+
+nav a:hover,
+.sommaire a:hover {
+    background-color: #0ef;
+    color: #000000
+}
+
+nav a span,
+.sommaire a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+    background-color: rgba(161, 161, 161, 0.8);
+    color: #000000;
+}
+
+nav a:hover span,
+.sommaire a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.presentation {
+    background-color: rgba(129, 129, 129, 0.8);
+    color: #ffffff;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
