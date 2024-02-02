@@ -226,10 +226,3 @@ nav a:hover span,
     background-color: rgba(129, 129, 129, 0.8);
     color: #ffffff;
 }
-
-figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
